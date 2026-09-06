@@ -11,13 +11,16 @@ void solve(){
     ll maxi=1;
     ll count=1;
 
-    for(int i=1;i<str.size()-1;i++){
+    for(int i=1;i<str.size();i++){
         if(str[i]!=str[i-1]){
             maxi=max(maxi,count);
             count=1;
         }
+        else{
         count++;
+        }
     }
+    maxi=max(maxi,count);
 
     cout<<maxi<<'\n';
 }
